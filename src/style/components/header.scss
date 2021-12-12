@@ -1,0 +1,41 @@
+@import '../utils/variables';
+@import '../bases/typographie';
+@import '../bases/bases';
+.header {
+	width: 86%;
+	margin: 2.5rem auto 3.75rem auto;
+	display: flex;
+	flex-direction: row;
+	font-size: 1.5rem;
+	svg {
+		max-height: 4.25rem;
+	}
+	&__nav {
+		display: flex;
+		margin-left: auto;
+		gap: 3.5rem;
+		align-items: center;
+		color: $accent;
+	}
+	&__link {
+		position: relative;
+		&::after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 2px;
+			left: 0;
+			bottom: 0;
+			background: $accent;
+			transform-origin: center;
+			transform: scale(0);
+			transition: transform 0.3s ease;
+		}
+		&.actif,
+		&:hover {
+			&::after {
+				transform: scale(1);
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+@import '../utils/variables';
+@import '../bases/typographie';
+@import '../bases/bases';
+
+main {
+	color: $accent;
+	text-align: center;
+	h1 {
+		font-size: 18rem;
+		font-weight: 700;
+	}
+	a {
+		text-decoration: underline;
+		line-height: 10;
+	}
+}

@@ -1,0 +1,55 @@
+@import '../utils/variables';
+@import '../bases/typographie';
+@import '../bases/bases';
+
+.carousel {
+	--total-width: 86vw;
+	--x-translate: calc(-86vw * var(--frame));
+	position: relative;
+	width: var(--total-width);
+	height: 26rem;
+	display: block;
+	margin: auto;
+	border-radius: 1.5rem;
+	overflow-x: hidden;
+	&__slides {
+		display: flex;
+	}
+	&__slide {
+		width: var(--total-width);
+		height: 26rem;
+		flex-shrink: 0;
+		transform: translateX(var(--x-translate));
+		transition: transform 0.5s ease-out;
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: white;
+		background: none;
+		border: none;
+		font-size: 5rem;
+		line-height: 5rem;
+		text-decoration: none;
+		cursor: pointer;
+		&--prev {
+			left: 1.5rem;
+		}
+		&--next {
+			right: 1.5rem;
+		}
+	}
+	&__legend {
+		position: absolute;
+		color: white;
+		left: 50%;
+		bottom: 1.5rem;
+		transform: translateX(-50%);
+	}
+}

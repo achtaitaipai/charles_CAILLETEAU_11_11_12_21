@@ -1,0 +1,50 @@
+@import '../utils/variables';
+@import '../bases/typographie';
+@import '../bases/bases';
+
+.logementsContainer {
+	width: 86%;
+	display: block;
+	margin: 2.5rem auto;
+	background: $neutral;
+	border-radius: 1.5rem;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
+}
+.logementCard {
+	position: relative;
+	width: 80%;
+	aspect-ratio: 69/69;
+	height: auto;
+	background: $accent;
+	margin: 1.56rem;
+	border-radius: 0.625rem;
+	overflow: hidden;
+	&__imgContainer {
+		width: 100%;
+		height: 100%;
+	}
+	&__img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+	&__legend {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 1.25rem;
+		color: white;
+		z-index: 69;
+		line-height: 1.2;
+		text-align: left;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+	}
+}
