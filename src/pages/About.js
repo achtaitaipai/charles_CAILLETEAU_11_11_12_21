@@ -1,7 +1,7 @@
 import React from 'react'
 import '../style/components/banner.scss'
 import banner from '../assets/imgs/bannerAbout.jpg'
-import Collapse from './Collapse'
+import Collapse from '../components/Collapse'
 
 class About extends React.Component {
 	render() {

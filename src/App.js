@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Home from './components/Home'
-import About from './components/About'
+import Home from './pages/Home'
+import About from './pages/About'
 import Footer from './components/Footer'
-import NoMatch from './components/NoMatch'
-import Logement from './components/Logement'
+import NoMatch from './pages/NoMatch'
+import Logement from './pages/Logement'
 import Header from './components/Header'
 
 class App extends React.Component {
